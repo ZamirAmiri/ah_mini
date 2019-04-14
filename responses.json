@@ -1,12 +1,90 @@
 {
 	"Screens":{
-		"home":{
-			"donations":[],
-			"trending":[]
+		"Profile":{
+
+		},
+		"Home":{
+			"donations":[
+				{
+					"projectId":123,
+					"projectName":"Whale watchers",
+					"Group":{
+						"size":26,
+						"creator":{
+							"id":12,
+							"name":"shairamiri",
+							"profile_pic":"not sure",
+							"coins": 123
+						},
+						"supporters":[
+							{
+								"id":12,
+								"name":"shairamiri",
+								"profile_pic": "not sure",
+								"coins":123
+							}
+						]
+					},
+					"total_coins":15679,
+					"donated_coins": 5,
+					"supporterName":"Suzanne",
+					"supporterId":12
+				},
+				{
+					"projectId":123,
+					"projectName":"Whale watchers",
+					"Group":{
+						"size":26,
+						"creator":{
+							"id":12,
+							"name":"shairamiri",
+							"profile_pic":"not sure",
+							"coins": 123
+						},
+						"supporters":[
+							{
+								"id":12,
+								"name":"shairamiri",
+								"profile_pic": "not sure",
+								"coins":123
+							}
+						]
+					},
+					"total_coins":15679,
+					"donated_coins": 20,
+					"supporterName":"shairamiri",
+					"supporterId":123
+				}
+			],
+			"trending":[
+				{
+					"projectId":123,
+					"projectName":"Whale watchers",
+					"Group":{
+						"size":26,
+						"creator":{
+							"id":12,
+							"name":"shairamiri",
+							"profile_pic":"not sure",
+							"coins": 123
+						},
+						"supporters":[
+							{
+								"id":12,
+								"name":"shairamiri",
+								"profile_pic": "not sure",
+								"coins":123
+							}
+						]
+					},
+					"total_coins":15679,
+					"group_size":26
+				}
+			]
 		},
 		"Watch an ad":{
 			"action": "add coin",
-			"type": "succes"
+			"result": "succes"
 		},
 		"Impact":{
 			"Global":{
@@ -38,7 +116,7 @@
 					"largest_accumulated_donation":1456,
 					"total_accumulated":34645
 				},
-				"Private donation":{
+				"Private_Donations":{
 					"total_donations":2264,
 					"total_helpcoins_donated":6264,
 					"largest_donation":456
@@ -59,7 +137,7 @@
 					"largest_accumulated_donation":1456,
 					"total_accumulated":34645
 				},
-				"Private donation":{
+				"Private_Donations":{
 					"total_donations":2264,
 					"total_helpcoins_donated":6264,
 					"largest_donation":456
@@ -85,13 +163,17 @@
 				}
 			],
 			"content":"TEXT",
-			"url":"www.example.com"
+			"url":"www.example.com",
+			"logo":"uri"
 		},
 		"Project":{
 			"id":2,
 			"name":"Trees for me",
-			"gpsX": 252.2325,
-			"gpsY": 123.12315,
+			"location":{
+				"City":"Den Haag,Netherlands",
+				"gpsX":5.23232,
+				"gpsY":8.373892
+			},
 			"foundationId":1,
 			"foundationName":"Red Cross",
 			"info":"TEXT",
@@ -103,7 +185,10 @@
 					"info":"TEXT"
 				}
 			],
-			"content":"TEXT"
+			"content":"TEXT",
+			"pictures":[{
+				"uri":"www.example.com"
+			}]
 		},
 		"Map":{
 			"Projects":[
@@ -127,29 +212,9 @@
 				"time":12,
 				"info":"TEXT",
 				"uri":"uri",
-				"Coins":1
+				"coins":1
 			}
-		],
-		"Donation":{
-			"creator":{
-				"id":12,
-				"name":"shairamiri",
-				"profile_pic":"not sure",
-				"coins": 123
-			},
-			"Project":{
-				"id":123,
-				"name":"Whale watchers"
-			},
-			"supporters":[
-				{
-					"id":12,
-					"name":"shairamiri",
-					"profile_pic": "not sure",
-					"coins":123
-				}
-			]
-		}
+		]
 	}
 	
 }
