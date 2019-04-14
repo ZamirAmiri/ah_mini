@@ -1,0 +1,40 @@
+{
+    "home":{
+        "action":"home",
+        "id":12
+    },
+    "watch_add":{
+        "action":"add_coins",
+        "id":12,
+        "coins":300
+    },
+    "Impact":{
+        "action":"impact",
+        "id":12
+    },
+    "Foundation":{
+        "action":"foundation",
+        "id":123
+    },
+    "Project":{
+        "action":"project",
+        "id":1235
+    },
+    "Map":{
+        "action":"Map"
+    },
+    "Donate":{
+        "public": true,
+        "groupId": -99,
+        "coins": 50,
+        "projectId":123,
+        "userId":123
+    },
+    "Tasks":{
+        "action":"tasks"
+    },
+    "Group":{
+        "action":"group",
+        "id":15
+    }
+}

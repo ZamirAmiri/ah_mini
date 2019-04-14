@@ -1,152 +1,152 @@
 {
-	Screens:{
-		'home':{
-			'donations':[],
-			'trending':[]
+	"Screens":{
+		"home":{
+			"donations":[],
+			"trending":[]
 		},
-		'Watch an ad':{
-			action: 'add coin',
-			type: succesful,
+		"Watch an ad":{
+			"action": "add coin",
+			"type": "succes"
 		},
-		'Impact':{
-			'Global':{
-				'Donations':{
-					'donations_last_thirtydays': 258264,
-					'total_donations': 1258264,
-					'largest_accumulated_donation':{
-						'userId': 1,
-						'userName': 'Suzanne',
-						'helpcoins': 23456
+		"Impact":{
+			"Global":{
+				"Donations":{
+					"donations_last_thirtydays": 258264,
+					"total_donations": 1258264,
+					"largest_accumulated_donation":{
+						"userId": 1,
+						"userName": "Suzanne",
+						"helpcoins": 23456
+					},
+					"largest_donation":{
+						"userId": 1,
+						"userName": "Suzanne",
+						"helpcoins": 1256
 					}
-					'largest_donation':{
-						'userId': 1,
-						'userName': 'Suzanne',
-						'helpcoins': 1256
-					}
 				},
-				'HelpCoins':{
-					donated_last_thrity_days: 564645,
-					donated_so_far:100258226,
-					generated:1025254236,
+				"HelpCoins":{
+					"donated_last_thrity_days": 564645,
+					"donated_so_far":100258226,
+					"generated":1025254236
 				},
-				'Users':{
-					users_joined_last_month:4524,
-					total_users:583425
+				"Users":{
+					"users_joined_last_month":4524,
+					"total_users":583425
 				},
-				'Public_Donations':{
-					'total_donations':2264,
-					'largest_accumulated_donation':1456,
-					'total_accumulated':34645
-				}
-				'Private donation':{
-					'total_donations':2264,
-					'total_helpcoins_donated':6264,
-					'largest_donation':456
+				"Public_Donations":{
+					"total_donations":2264,
+					"largest_accumulated_donation":1456,
+					"total_accumulated":34645
+				},
+				"Private donation":{
+					"total_donations":2264,
+					"total_helpcoins_donated":6264,
+					"largest_donation":456
 				}
 			},
-			'Personal':{
-				'Donations':{
-					'donations_last_thirtydays': 258264,
-					'total_donations': 1258264,
+			"Personal":{
+				"Donations":{
+					"donations_last_thirtydays": 258264,
+					"total_donations": 1258264
 				},
-				'HelpCoins':{
-					donated_last_thrity_days: 564645,
-					donated_so_far:100258226,
-					generated:1025254236,
+				"HelpCoins":{
+					"donated_last_thrity_days": 564645,
+					"donated_so_far":100258226,
+					"generated":1025254236
 				},
-				'Public_Donations':{
-					'total_donations':2264,
-					'largest_accumulated_donation':1456,
-					'total_accumulated':34645
-				}
-				'Private donation':{
-					'total_donations':2264,
-					'total_helpcoins_donated':6264,
-					'largest_donation':456
+				"Public_Donations":{
+					"total_donations":2264,
+					"largest_accumulated_donation":1456,
+					"total_accumulated":34645
+				},
+				"Private donation":{
+					"total_donations":2264,
+					"total_helpcoins_donated":6264,
+					"largest_donation":456
 				}
 			}
 		},
-		'Foundation':{
-			'id':1,
-			'name':'Red Cross',
-			'location':{
-				City:'Den Haag,Netherlands',
-				gpsX:5.23232,
-				gpsY:8.373892,
+		"Foundation":{
+			"id":1,
+			"name":"Red Cross",
+			"location":{
+				"City":"Den Haag,Netherlands",
+				"gpsX":5.23232,
+				"gpsY":8.373892
 			},
-			'people_donated':10256,
-			'helpcoins_generated':2568,
-			'info':'TEXT',
-			'Projects':[
+			"people_donated":10256,
+			"helpcoins_generated":2568,
+			"info":"TEXT",
+			"Projects":[
 				{
-					'id':1,
-					'name':'Orka watchers',
-					'picture':'URI',
-				},
-			],
-			'content':'TEXT',
-			'url':'www.example.com',
-		},
-		'Project':{
-			'id':2,
-			'name':'Trees for me',
-			'gpsX': 252.2325,
-			'gpsY': 123.12315,
-			'foundationId':1,
-			'foundationName':'Red Cross',
-			'info':'TEXT',
-			Impact:[
-				{
-					'icon':'uri/TYPE',
-					'target':'12 Smeckels',
-					'reward':'1 maaltijd'
-					'info':'TEXT',
+					"id":1,
+					"name":"Orka watchers",
+					"picture":"URI"
 				}
 			],
-			'content':'TEXT',
+			"content":"TEXT",
+			"url":"www.example.com"
 		},
-		'Map':{
-			'Projects':[
+		"Project":{
+			"id":2,
+			"name":"Trees for me",
+			"gpsX": 252.2325,
+			"gpsY": 123.12315,
+			"foundationId":1,
+			"foundationName":"Red Cross",
+			"info":"TEXT",
+			"Impact":[
 				{
-					'icon':'type/uri',
-					'id':12,
-					'name':'kill all whales',
-					'gspX': 23.24242,
-					'gsxY': 23.535464,
+					"icon":"uri/TYPE",
+					"target":"12 Smeckels",
+					"reward":"1 maaltijd",
+					"info":"TEXT"
+				}
+			],
+			"content":"TEXT"
+		},
+		"Map":{
+			"Projects":[
+				{
+					"icon":"type/uri",
+					"id":12,
+					"name":"kill all whales",
+					"gspX": 23.24242,
+					"gsxY": 23.535464
 				}
 			]
 		},
-		'Donation':{
-			status:'succes'
-			code: {CODE}
+		"Donation_response":{
+			"status":"succes",
+			"code": "CODE"
 		},
-		'Task':[
+		"Task":[
 			{
-				'id':123,
-				'title':"zorgverzekering",
-				time:12,
-				info:'TEXT',
-				uri:'uri'
-				'Coins':1,
-			},
-		],
-		'Donation':{
-			creator:{
-				id:12,
-				name:'shairamiri',
-				profile_pic: //not sure
-				coins: 123,
-			},
-			'Project':{
-				'id':123,
-				'name':'Whale watchers',
+				"id":123,
+				"title":"zorgverzekering",
+				"time":12,
+				"info":"TEXT",
+				"uri":"uri",
+				"Coins":1
 			}
-			'supporters':[
+		],
+		"Donation":{
+			"creator":{
+				"id":12,
+				"name":"shairamiri",
+				"profile_pic":"not sure",
+				"coins": 123
+			},
+			"Project":{
+				"id":123,
+				"name":"Whale watchers"
+			},
+			"supporters":[
 				{
-					id:12,
-					name:'shairamiri',
-					profile_pic: //not sure
-					coins:123,
+					"id":12,
+					"name":"shairamiri",
+					"profile_pic": "not sure",
+					"coins":123
 				}
 			]
 		}
