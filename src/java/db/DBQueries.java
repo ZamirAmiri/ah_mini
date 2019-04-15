@@ -7,7 +7,7 @@ package db;
 
 /**
  *
- * @author canismajoris
+ * @author zamir
  */
 public class DBQueries {
 

@@ -23,7 +23,7 @@ import javax.websocket.server.ServerEndpoint;
 
 /**
  *
- * @author zamir amiri
+ * @author zamir
  */
 @ApplicationScoped
 @ServerEndpoint("/actions")
