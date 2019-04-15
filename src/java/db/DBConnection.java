@@ -116,7 +116,7 @@ public class DBConnection {
                     objBuilder.add("id",result.getInt("id"));
                     objBuilder.add("projectId", result.getInt("projectId"));
                     objBuilder.add("projectName", result.getString("projectName"));
-                    objBuilder.add("group", this.getGroup(result.getInt("id")));
+                    objBuilder.add("group", this.getGroup(result.getInt("groupId")));
                     objBuilder.add("total_coins", result.getInt("total_coins"));
                     objBuilder.add("donated_coins", result.getInt("donated_coins"));
                     objBuilder.add("supporterName", result.getString("supporterName"));
@@ -144,7 +144,7 @@ public class DBConnection {
                     objBuilder = this.provider.createObjectBuilder();
                     objBuilder.add("projectId", result.getInt("projectId"));
                     objBuilder.add("projectName", result.getString("projectName"));
-                    objBuilder.add("group", this.getGroup(result.getInt("id")));
+                    objBuilder.add("group", this.getGroup(result.getInt("groupId")));
                     response.add(objBuilder);
                 }
             }
@@ -168,9 +168,9 @@ public class DBConnection {
     private JsonValue getPersonalImpact(int id) {
         JsonObjectBuilder response = this.provider.createObjectBuilder();
         response.add("Donations",           this.getPersonalImpactDonations(id));
-        response.add("Helpcoins", this.getGlobalOrPersonalImpactHelpcoins(this.queries.getPersonalImpactHelpcoins()));
-        response.add("Public_Donations", this.getGlobalOrPersonalImpactPrivateOrPublicDonations(this.queries.getPersonalImpactPrivateDonations()));
-        response.add("Private_Donations", this.getGlobalOrPersonalImpactPrivateOrPublicDonations(this.queries.getPersonalImpactPublicDonations()));
+        response.add("Helpcoins", this.getGlobalOrPersonalImpactHelpcoins(this.queries.getPersonalImpactHelpcoins(String.valueOf(id))));
+        response.add("Public_Donations", this.getGlobalOrPersonalImpactPrivateOrPublicDonations(this.queries.getPersonalImpactPrivateDonations(String.valueOf(id))));
+        response.add("Private_Donations", this.getGlobalOrPersonalImpactPrivateOrPublicDonations(this.queries.getPersonalImpactPublicDonations(String.valueOf(id))));
         return response.build();
     }
 
@@ -207,9 +207,10 @@ public class DBConnection {
                     objBuilder.add("info",                  result.getString("info"));
                     objBuilder.add("Projects",              this.getFoundationProjects(result.getInt("id")));
                     objBuilder.add("content",               result.getString("content"));
-                    objBuilder.add("url",                   result.getString("url"));
+                    objBuilder.add("website",               result.getString("website"));
                     objBuilder.add("logo",                  result.getString("logo"));
                     objBuilder.add("picture",               result.getString("picture"));
+                    objBuilder.add("reward",                result.getString("reward"));
                     response.add(objBuilder);
                 }
             }
@@ -234,8 +235,10 @@ public class DBConnection {
                     objBuilder.add("id",            result.getInt("id"));
                     objBuilder.add("name",          result.getString("name"));
                     objBuilder.add("location",      this.createLocation(result.getString("gpsX"),result.getString("gpsY")));
-                    objBuilder.add("foundationId",  result.getString("people_donated"));
-                    objBuilder.add("foundationName",result.getInt("helpcoins_generated"));
+                    objBuilder.add("people_donated",  result.getString("people_donated"));
+                    objBuilder.add("helpcoins_generated",result.getInt("helpcoins_generated"));
+                    objBuilder.add("foundationId", result.getInt("foundation"));
+                    objBuilder.add("foundationName", result.getString("foundationName"));
                     objBuilder.add("info",          result.getString("info"));
                     objBuilder.add("Impact",        this.getProjectImpacts(result.getInt("id")));
                     objBuilder.add("content",       result.getString("content"));
@@ -258,8 +261,8 @@ public class DBConnection {
         return this.failure();
     }
 
-    private JsonObject getGroup(int projectId) {
-        String query = this.queries.getGroup(String.valueOf(projectId));
+    private JsonObject getGroup(int groupId) {
+        String query = this.queries.getGroup(String.valueOf(groupId));
         JsonObjectBuilder response = this.provider.createObjectBuilder();
         ResultSet result;
         try {
@@ -382,7 +385,7 @@ public class DBConnection {
                 Statement stmt = con.createStatement();
                 result = stmt.executeQuery(query);
                 if(result.next()) {
-                    response.add("users_joined_last_month",result.getInt("users_joined_last_month"));
+                    response.add("users_joined_last_thirtydays",result.getInt("users_joined_last_thirtydays"));
                     response.add("total_users", result.getInt("total_users"));
                 }
             }
@@ -583,8 +586,11 @@ public class DBConnection {
                 result = stmt.executeQuery(query);
                 while(result.next()) {
                     obj = this.provider.createObjectBuilder();
+                    obj.add("recipient", result.getString("date"));
+                    obj.add("userName", result.getString("username"));
+                    obj.add("coins", result.getInt("coins"));
                     obj.add("date", result.getString("date"));
-                    obj.add("message", result.getString("message"));
+                    response.add(obj);
                 }
             }
         } catch (ClassNotFoundException | SQLException e) {

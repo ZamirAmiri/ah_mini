@@ -92,18 +92,18 @@
 					"donations_last_thirtydays": 258264,
 					"total_donations": 1258264,
 					"largest_accumulated_donation":{
-						"userId": 1,
-						"userName": "Suzanne",
-						"helpcoins": 23456
+						"id": 1,
+						"name": "Suzanne",
+						"coins": 23456
 					},
 					"largest_donation":{
-						"userId": 1,
-						"userName": "Suzanne",
-						"helpcoins": 1256
+						"id": 1,
+						"name": "Suzanne",
+						"coins": 1256
 					}
 				},
 				"HelpCoins":{
-					"donated_last_thrity_days": 564645,
+					"donated_last_thritydays": 564645,
 					"donated_so_far":100258226,
 					"generated":1025254236
 				},
@@ -128,7 +128,7 @@
 					"total_donations": 1258264
 				},
 				"HelpCoins":{
-					"donated_last_thrity_days": 564645,
+					"donated_last_thritydays": 564645,
 					"donated_so_far":100258226,
 					"generated":1025254236
 				},
@@ -163,8 +163,9 @@
 				}
 			],
 			"content":"TEXT",
-			"url":"www.example.com",
-			"logo":"uri"
+			"website":"www.example.com",
+			"logo":"uri",
+			"reward":"TEXT"
 		},
 		"Project":{
 			"id":2,
