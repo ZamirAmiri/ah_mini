@@ -4,3 +4,12 @@
 /web
 /build/
 /dist/
+javaee-endorsed-api-7.0.jar
+/react_native/app.json
+/react_native/babel_config.js
+/react_native/ios/
+/react_native/android/
+/react_native/metro.config.js
+/react_native/node_modules/
+/react_native/package-lock.json
+/react_native/__tests__
