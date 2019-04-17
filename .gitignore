@@ -13,6 +13,11 @@ javaee-endorsed-api-7.0.jar
 /react_native/node_modules/
 /react_native/package-lock.json
 /react_native/__tests__
+/react_native/.buckconfig
+/react_native/.flowconfig
+/react_native/.gitattributes
+/react_native/.watchmanconfig
+/react_native/.babel.config.js
 # OSX
 #
 .DS_Store
@@ -69,9 +74,3 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
-.buckconfig
-.flowconfig
-.gitattributes
-.watchmanconfig
-.babel.config.js
-
