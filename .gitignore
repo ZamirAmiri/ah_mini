@@ -18,6 +18,7 @@ javaee-endorsed-api-7.0.jar
 /react_native/.gitattributes
 /react_native/.watchmanconfig
 /react_native/.babel.config.js
+/react_native/package.json
 # OSX
 #
 .DS_Store
